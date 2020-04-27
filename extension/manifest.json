@@ -1,0 +1,39 @@
+{
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "build/inject.js"
+      ],
+      "matches": [
+        "https://github.com/*"
+      ]
+    }
+  ],
+  "default_locale": "en",
+  "description": "",
+  "homepage_url": "http://www.herod.dev",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "manifest_version": 2,
+  "name": "Herod's GitHub PR Helper",
+  "options_page": "options.html",
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "example page action",
+    "default_popup": "page_action.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "https://github.com/*"
+  ],
+  "version": "0.0.1"
+}
